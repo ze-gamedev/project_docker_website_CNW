@@ -1,0 +1,28 @@
+Projeto:
+	HTML (Semântico)
+	CSS (um único arquivo de estilo externo)
+	JS (interno em cada pagina)
+
+	20 paginas no min
+
+
+	TEMA: DOCKER (passo a passo instalação até bootar redhat em maquina virtual)
+
+	Entrega parcial: 03/09 (6 paginas apenas)
+	Entrega final: 10/09
+
+	Ideia:
+		Referências:
+			https://www.docker.com/
+			https://www.docker.com/get-started/
+			https://docs.docker.com/engine/install/
+			https://developer.mozilla.org/pt-BR/docs/Web/HTML/Reference/Elements
+			https://www.tecmundo.com.br/
+
+		Home (1 pág)
+		Autores (1 pág)
+		Sobre Docker(1 pág);
+		Tutoriais (1 pág):
+			Como instalar o Docker(5 pág por SO)
+			Como iniciar um container no redhat (5 pág)
+		
