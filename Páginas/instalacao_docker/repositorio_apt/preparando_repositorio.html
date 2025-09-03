@@ -48,7 +48,7 @@
 
         <section id="luke_skywalker">
 
-            <h2>Prepare o repositorio APT do docker</h2>
+            <h2 id="obi_wan">prepare o repositorio apt do docker</h2>
             <p>Antes da instalação ser feita pela primeira vez na máquina, você, como usuário deve preparar o
                 repositório APT do Docker, para baixa-lo a partir deste repositório<br>
             <section id="han_solo_code">
@@ -77,6 +77,48 @@
 
     <footer>
     </footer>
+
+        <script>
+
+        ///pegarei o texto e entao farei ele fazer Shiu - sHiu - shIu - shiU
+
+        // pega texto
+        let text = document.getElementById("obi_wan");
+        //armazena texto
+        let original_text = text.textContent;
+        //contador do texto
+        let letter_get = 0;
+
+        // essa função pega a letra do contador e a torna maiuscula adicionando a uma nova string e transformando a nova string no texto mostrado
+        function OnetoUpperCase() {
+            let novoTexto = "";
+
+            ///loop para pegar a coordenada de caracter por caracter para torna-lo BIG 
+            for (let i = 0; i < original_text.length; i++) {
+                if (i === letter_get) {
+                    novoTexto += original_text[i].toUpperCase();
+                } else {
+                    novoTexto += original_text[i].toLowerCase();
+                }
+            }
+
+            //transforma texto da pagina no texto modificado
+            text.textContent = novoTexto;
+
+            // aumenta contador
+            letter_get += 1;
+
+            // se o contador passar de onde deve, reinicia
+            if (letter_get >= original_text.length){
+                letter_get = 0;
+            }
+        }
+
+
+        //DEEEELAAAAAAAAAY em loop*
+        setInterval(OnetoUpperCase, 200);
+
+    </script>
 </body>
 
 </html>
