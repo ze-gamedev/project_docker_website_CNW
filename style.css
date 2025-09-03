@@ -1,10 +1,11 @@
 
- /* reset básico */
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
+
+/*Sessão de estilo geral*/
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
 
  html,
  body {
@@ -13,7 +14,141 @@
      background: #2d3047;
      color: #eee5e9;
      font-family: 'Roboto', sans-serif;
+     overflow-x: hidden;
  }
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #92dce5; 
+}
+::-webkit-scrollbar-thumb {
+  background: #5289ff;
+  transition-duration: 0.1s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #154eca;
+  border-radius: 10px;
+}
+
+body{
+    background-color: #2d3047;
+}
+
+
+/* Sessão de estilo de José Fernandes*/
+#darth_vader{
+    display: flex;
+}
+
+#milleniun_falcon{
+    height: 100vh;
+    width: 20vw;
+    border-right: 2px solid #5289ff;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    
+}
+
+#milleniun_falcon_master, #milleniun_falcon_copilot, #milleniun_falcon_wings{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    list-style: none;
+    color: #eee5e9;
+}
+
+#milleniun_falcon_planet_selected{
+    color: #5289ff;
+    text-decoration: underline;
+}
+
+#dookan_tyranus{
+    background-color: #5289ff;
+    height: 20vh;
+
+
+#albus_dumbledore {
+    background-color: #5289ff;
+    height: 15vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#albus_dumbledore>h1 {
+    margin: 10px;
+    color: #eee5e9;
+    font-family: sans-serif;
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+#severus_snape {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: #eee5e9;
+    font-family: sans-serif;
+    font-weight: 700px;
+    font-size: 24px;
+}
+
+#harry_potter {
+    margin-top: 100px;
+    background-color: #5289ff;
+    color: #eee5e9;
+    font-size: 17px;
+    padding-left: 15px;
+}
+
+#hogwarts_express_carriage {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sirius_black {
+    color: #eee5e9;
+    font-size: 17px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.hermione {
+    color: #eee5e9;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.hermione_granger{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#footer {
+    margin: 10px;
+    color: #eee5e9;
+    font-family: sans-serif;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
 
 
 
@@ -102,12 +237,64 @@
  }
 
 
+
+
+
 #albus_dumbledore {
     background-color: #5289ff;
     height: 15vh;
+
     display: flex;
     justify-content: start;
     align-items: center;
+}
+
+
+#dookan_tyranus > h1{
+    margin: 10px;
+    color: #eee5e9;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 62px;
+}
+
+#darth_vader > #luke_skywalker{
+    margin: 10px;
+    color: #eee5e9;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+}
+
+#qui_gon_jinn{
+    color: #5289ff;
+    transition-duration: 0.1s;
+}
+
+#qui_gon_jinn:hover{
+    color: #92dce5;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+#han_solo_code{
+    background-color: #171930;
+}
+
+#han_solo_code > p{
+    color: #92dce5;
+}
+
+#watto{
+    color: #eee5e9;
+}
+
+#chewbacca{
+    color: #a37774;
+}
+
+a{
+    color: #eee5e9;
+    text-decoration: none;
 }
 
 #albus_dumbledore>h1 {
