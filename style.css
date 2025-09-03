@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+body, html{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #92dce5; 
+}
+::-webkit-scrollbar-thumb {
+  background: #5289ff;
+  transition-duration: 0.1s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #154eca;
+  border-radius: 10px;
+}
+
+body{
+    background-color: #2d3047;
+}
+.h1_siri{
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color:aliceblue;
+}
+.quadrados_patrickestrela{
+    width: 1110px;
+    height: 250px;
+    background-color:rgb(74, 128, 110);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 50px;
+    font-size: xx-large
+}
+.h2_lulamolusco{
+    background-color: rgb(74, 128, 110) ;
+    box-align: center;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 550px;
+    margin-left: 236px;
+
+}
+.h2_lulamolusco2{
+    background-color: rgb(74, 128, 110) ;
+    box-align: center;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 190px;
+    margin-left: 241px;
+}
+.hyperlink_puffs{
+    text-decoration: none;
+}
