@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Utilização do Docker">
+    <title>Utilização do Decker</title>
+    <link rel="stylesheet" href="./../../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;700;900&family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="jujuba">
+        <h1>Utilização</h1>
+        <nav id="jake" aria-label="Menu principal">
+            <ul id="jake">
+                <li><a id="jake_cao_selected" href="#lady_iris" aria-current="page">Utilização do Docker</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="finn">
+        <section id="lady_iris">
+            <h2>Como o Docker funciona e para que ele é usado</h2>
+
+            <article>
+                <p id="finn_p">O Docker é uma tecnologia que permite criar <strong>containers</strong>, que são como
+                    pequenas “caixas” onde aplicativos e todas as suas dependências podem ser armazenados e executados
+                    de forma isolada. Cada container funciona de maneira independente, mas compartilha o mesmo sistema
+                    operacional do computador hospedeiro. Isso significa que é possível rodar vários aplicativos
+                    diferentes ao mesmo tempo, sem que um interfira no outro.</p>
+            </article>
+
+            <article>
+                <p id="finn_p">Para criar essa separação, o Docker utiliza funcionalidades do Linux, como
+                    <strong>cGroups</strong> e <strong>namespaces</strong>, que controlam o uso de recursos do sistema
+                    (como memória e CPU) e isolam os processos. Essa estrutura garante que cada container tenha o que
+                    precisa para funcionar, sem depender de programas instalados em outros lugares.
+                </p>
+            </article>
+
+            <article>
+                <p id="finn_p">A grande vantagem do Docker é a <strong>portabilidade</strong>. Um container criado em um
+                    computador pode ser levado para outro e continuará funcionando do mesmo jeito, sem precisar
+                    configurar nada. Isso facilita muito a instalação de softwares e o trabalho em equipe, já que todos
+                    podem usar exatamente o mesmo ambiente.</p>
+            </article>
+
+            <article>
+                <h3>Exemplo prático</h3>
+                <p id="finn_p">Se você desenvolve um site em Python, normalmente precisaria instalar o Python,
+                    bibliotecas e configurar o servidor em cada máquina onde o site fosse executado. Com Docker, tudo
+                    isso já está dentro do container. Basta rodar o container e o site funciona imediatamente, em
+                    qualquer computador.</p>
+            </article>
+
+            <article>
+                <p id="finn_p">Além disso, o Docker permite dividir sistemas complexos em <strong>vários containers
+                        menores</strong>, como um para o banco de dados, outro para o site e outro para o sistema de
+                    login. Cada parte roda de forma isolada, mas todas se comunicam entre si, tornando a manutenção e
+                    atualização mais simples.</p>
+            </article>
+
+            <article>
+                <p id="finn_p">Em resumo, o Docker facilita a execução, a distribuição e a manutenção de aplicativos,
+                    tornando os processos mais rápidos, seguros e organizados.</p>
+            </article>
+        </section>
+        </section>
+
+        <section class="container">
+            <h1 id="prismo">Quiz Git</h1>
+            <h4>1. Qual é a principal vantagem do Docker??</h4>
+            <section class="question" id="r1">
+                <p>
+                    a. Permite que os containers usem sistemas operacionais diferentes dentro do mesmo computador.<br>
+                    b. Facilita a portabilidade, já que um container pode ser levado para outro computador e funcionar da mesma forma.<br>
+                    c. Faz com que aplicativos nunca precisem de memória ou CPU.<br>
+                    d. Substitui completamente a necessidade de programadores configurarem sistemas.<br>
+                </p>
+                <button id="rei" onclick="questao1()">Questão 1</button>
+            </section>
+            <hr id="litch">
+            <h4>
+                O Docker utiliza recursos do Linux, como cGroups e namespaces, para isolar processos e controlar o uso de memória e CPU.
+            </h4>
+            <p>Verdadeiro ou falso</p>
+            <section class="question" id="r2">
+                <button id="rei" onclick="questao2()">Questão 2</button>
+            </section>
+            <hr id="litch">
+            <h3>Clique no botão para finalizar</h3>
+            <section class="question">
+                <button id="rei" onclick="fim()">finalizar</button>
+            </section>
+            <p id="pontos"></p>
+            <hr id="litch">
+
+            <h3>Respostas corretas</h3>
+            <p id="meuParagrafo"></p>
+            <button id="rei" onclick="alterarParagrafo()">Respostas</button>
+
+            <script>
+                let pontos = 0;
+
+                function questao1() {
+                    resposta1 = prompt("Responda com uma letra minúscula");
+                    certa1 = 'b';
+
+                    if (resposta1 == certa1) {
+                        pontos++;
+                        document.getElementById("r1").innerText = resposta1 + ' Certa';
+                    } else {
+                        document.getElementById("r1").innerText = ' Incorreto ' + resposta1;
+                    }
+
+                }
+
+                function questao2() {
+                    resposta2 = confirm('Clique ok para verdadeiro e cancalar para falso');
+
+                    if (resposta2 == true) {
+                        pontos++;
+                        document.getElementById("r2").innerText = ' Certa';
+                    } else {
+                        document.getElementById("r2").innerText = ' Incorreto ';
+                    }
+                }
+                function alterarParagrafo() {
+                    document.getElementById("meuParagrafo").innerText =
+                        "Questão 1: b\n" +
+                        "Questão 2: Verdadeiro\n";
+                }
+                function fim() {
+                    document.getElementById("pontos").innerText = 'Você acertou ' + pontos + ' pontos de 2';
+                }
+
+            </script>
+    </main>
+    <footer id="finn_footer">
+        <p>
+            <a id="marceline_prev" href="#pkg-search">Retornar</a>
+            <a id="marceline_next" href="#apt-prep">Avançar</a>
+        </p>
+        <small>&copy; 2025 • Guia educativo</small>
+    </footer>
+</body>
+
+</html>
