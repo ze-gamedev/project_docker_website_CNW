@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Utilização do Docker">
     <title>Utilização do Decker</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./../../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;700;900&family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap"
         rel="stylesheet">
-  
+
 </head>
 
 <body>
@@ -41,7 +41,8 @@
                 <p id="finn_p">Para criar essa separação, o Docker utiliza funcionalidades do Linux, como
                     <strong>cGroups</strong> e <strong>namespaces</strong>, que controlam o uso de recursos do sistema
                     (como memória e CPU) e isolam os processos. Essa estrutura garante que cada container tenha o que
-                    precisa para funcionar, sem depender de programas instalados em outros lugares.</p>
+                    precisa para funcionar, sem depender de programas instalados em outros lugares.
+                </p>
             </article>
 
             <article>
@@ -72,13 +73,82 @@
             </article>
         </section>
         </section>
-    </main>
 
+        <section class="container">
+            <h1 id="prismo">Quiz Git</h1>
+            <h4>1. Qual é a principal vantagem do Docker??</h4>
+            <section class="question" id="r1">
+                <p>
+                    a. Permite que os containers usem sistemas operacionais diferentes dentro do mesmo computador.<br>
+                    b. Facilita a portabilidade, já que um container pode ser levado para outro computador e funcionar da mesma forma.<br>
+                    c. Faz com que aplicativos nunca precisem de memória ou CPU.<br>
+                    d. Substitui completamente a necessidade de programadores configurarem sistemas.<br>
+                </p>
+                <button id="rei" onclick="questao1()">Questão 1</button>
+            </section>
+            <hr id="litch">
+            <h4>
+                O Docker utiliza recursos do Linux, como cGroups e namespaces, para isolar processos e controlar o uso de memória e CPU.
+            </h4>
+            <p>Verdadeiro ou falso</p>
+            <section class="question" id="r2">
+                <button id="rei" onclick="questao2()">Questão 2</button>
+            </section>
+            <hr id="litch">
+            <h3>Clique no botão para finalizar</h3>
+            <section class="question">
+                <button id="rei" onclick="fim()">finalizar</button>
+            </section>
+            <p id="pontos"></p>
+            <hr id="litch">
+
+            <h3>Respostas corretas</h3>
+            <p id="meuParagrafo"></p>
+            <button id="rei" onclick="alterarParagrafo()">Respostas</button>
+
+            <script>
+                let pontos = 0;
+
+                function questao1() {
+                    resposta1 = prompt("Responda com uma letra minúscula");
+                    certa1 = 'b';
+
+                    if (resposta1 == certa1) {
+                        pontos++;
+                        document.getElementById("r1").innerText = resposta1 + ' Certa';
+                    } else {
+                        document.getElementById("r1").innerText = ' Incorreto ' + resposta1;
+                    }
+
+                }
+
+                function questao2() {
+                    resposta2 = confirm('Clique ok para verdadeiro e cancalar para falso');
+
+                    if (resposta2 == true) {
+                        pontos++;
+                        document.getElementById("r2").innerText = ' Certa';
+                    } else {
+                        document.getElementById("r2").innerText = ' Incorreto ';
+                    }
+                }
+                function alterarParagrafo() {
+                    document.getElementById("meuParagrafo").innerText =
+                        "Questão 1: b\n" +
+                        "Questão 2: Verdadeiro\n";
+                }
+                function fim() {
+                    document.getElementById("pontos").innerText = 'Você acertou ' + pontos + ' pontos de 2';
+                }
+
+            </script>
+    </main>
     <footer id="finn_footer">
         <p>
-            <a id="marceline_prev" href="../../index.html">Retornar</a>
+            <a id="marceline_prev" href="#pkg-search">Retornar</a>
+            <a id="marceline_next" href="#apt-prep">Avançar</a>
         </p>
-
+        <small>&copy; 2025 • Guia educativo</small>
     </footer>
 </body>
 

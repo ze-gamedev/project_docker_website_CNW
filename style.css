@@ -543,3 +543,46 @@ hr {
     height: 80px;
     background-color: #5289FF;
 }
+.container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(#283f70, #4d7ee7);
+            border-radius: 10px;
+        }
+    
+
+        #prismo {
+            text-align: center;
+        }
+
+        #litch {
+            border: none;
+            border-top: 1px solid #607D8B;
+            margin: 20px 0;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        #rei {
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: none;
+            background: #084874;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #rei:hover {
+            background: #084874;
+        }
+
+        #result {
+            font-weight: bold;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+        }
