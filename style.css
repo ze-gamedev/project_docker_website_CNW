@@ -1,104 +1,538 @@
- /* reset básico */
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
-
- html,
- body {
-     width: 100%;
-     height: 100%;
-     background: #2d3047;
-     color: #eee5e9;
-     font-family: 'Roboto', sans-serif;
- }
-
- /*estilo do cabeçalho*/
- #jujuba {
-     background: linear-gradient(#4d7ee7, #89c4f5);
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     padding: 12px
- }
-
- #jujuba>h1 {
-     font-family: 'League Spartan', sans-serif;
-     font-size: 42px;
-     color: #251085;
-     margin-bottom: 8px
- }
-
- /*estilo dos links*/
- #jake {
-     display: flex;
-     gap: 30px;
-     list-style: none;
-     padding: 10px
- }
-
- #jake a {
-     color: #0e043a;
-     text-decoration: none;
-     font-size: 20px;
-     font-weight: 200;
-     transition: 0.1s
- }
-
- #jake a:hover {
-     color: #251085;
-     font-weight: 300;
-     text-decoration: underline
- }
-
- /*estilo do item ativo do menu*/
- #jake_cao_selected {
-     color: #5289ff;
-     text-decoration: underline
- }
-
- /*espaçamento interno do main*/
- #finn {
-     padding: 20px
- }
-
- section {
-     margin-bottom: 24px
- }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
- /* “Retornar / Avançar”. */
- #marceline_prev,
- #marceline_next {
-     color: #5289ff;
-     margin-right: 10px;
-     transition: 0.1s
- }
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #2d3047;
+    color: #eee5e9;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
 
- #marceline_prev:hover,
- #marceline_next:hover {
-     color: #92dce5;
-     text-decoration: underline;
-     font-weight: 300
- }
 
- #finn_p {
-     text-align: justify;
-     line-height: 1.2;
-     margin-bottom: 16px;
-     color: #eee5e9;
-     font-family: 'Nunito', sans-serif;
-     font-size: 18px;
- }
 
- #finn_footer {
-     padding: 16px;
-     text-align: center;
-     color: #cbd5e1
- }
+::-webkit-scrollbar {
+    width: 10px;
+}
 
- .container {
+::-webkit-scrollbar-track {
+    background: #92dce5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5289ff;
+    transition-duration: 0.1s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #154eca;
+    border-radius: 10px;
+}
+
+body {
+    background-color: #2d3047;
+}
+
+.h1_siri {
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: aliceblue;
+}
+
+.quadrados_patrickestrela {
+    width: 1110px;
+    height: 250px;
+    background-color: rgb(74, 128, 110);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 50px;
+    font-size: xx-large
+}
+
+.h2_lulamolusco {
+    background-color: rgb(74, 128, 110);
+    box-align: center;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 550px;
+    margin-left: 236px;
+
+}
+
+.h2_lulamolusco2 {
+    background-color: rgb(74, 128, 110);
+    box-align: center;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 190px;
+    margin-left: 241px;
+}
+
+.hyperlink_puffs {
+    text-decoration: none;
+}
+
+
+
+/* Sessão de estilo de José Fernandes*/
+#darth_vader {
+    display: flex;
+}
+
+#milleniun_falcon {
+    height: 100vh;
+    width: 20vw;
+    border-right: 2px solid #5289ff;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+
+}
+
+#milleniun_falcon_master,
+#milleniun_falcon_copilot,
+#milleniun_falcon_wings {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    list-style: none;
+    color: #eee5e9;
+}
+
+#milleniun_falcon_planet_selected {
+    color: #5289ff;
+    text-decoration: underline;
+}
+
+#dookan_tyranus {
+    background-color: #5289ff;
+    display: flex;
+    align-items: center;
+    height: 20vh;
+}
+
+#albus_dumbledore {
+    background-color: #5289ff;
+    height: 15vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#albus_dumbledore>h1 {
+    margin: 10px;
+    color: #eee5e9;
+    font-family: sans-serif;
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+#severus_snape {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: #eee5e9;
+    font-family: sans-serif;
+    font-weight: 700px;
+    font-size: 24px;
+}
+
+
+#hogwarts_express {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sirius_black {
+    color: #eee5e9;
+    font-size: 17px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.hermione {
+    color: #eee5e9;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.hermione_granger {
+    color: #eee5e9;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#footer {
+    margin: 10px;
+    color: #eee5e9;
+    font-family: sans-serif;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+#firebolt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.autor-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ronald_weasley {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.nome-autor {
+    color: #eee5e9;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+
+/*estilo do cabeçalho*/
+#jujuba {
+    background: linear-gradient(#4d7ee7, #89c4f5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px
+}
+
+#jujuba>h1 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 42px;
+    color: #251085;
+    margin-bottom: 8px
+}
+
+/*estilo dos links*/
+#jake {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 10px
+}
+
+#jake a {
+    color: #0e043a;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 200;
+    transition: 0.1s
+}
+
+#jake a:hover {
+    color: #251085;
+    font-weight: 300;
+    text-decoration: underline
+}
+
+/*estilo do item ativo do menu*/
+#jake_cao_selected {
+    color: #5289ff;
+    text-decoration: underline
+}
+
+/*espaçamento interno do main*/
+#finn {
+    padding: 20px
+}
+
+section {
+    margin-bottom: 24px
+}
+
+
+/* “Retornar / Avançar”. */
+#marceline_prev,
+#marceline_next {
+    color: #5289ff;
+    margin-right: 10px;
+    transition: 0.1s
+}
+
+#marceline_prev:hover,
+#marceline_next:hover {
+    color: #92dce5;
+    text-decoration: underline;
+    font-weight: 300
+}
+
+#finn_p {
+    text-align: justify;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: #eee5e9;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+}
+
+#finn_footer {
+    padding: 16px;
+    text-align: center;
+    color: #cbd5e1
+}
+
+
+
+
+
+#albus_dumbledore {
+    background-color: #5289ff;
+    height: 15vh;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+#dookan_tyranus>h1 {
+    margin: 10px;
+    color: #eee5e9;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 62px;
+}
+
+#darth_vader>#luke_skywalker {
+    margin: 10px;
+    color: #eee5e9;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+}
+
+#qui_gon_jinn {
+    color: #5289ff;
+    transition-duration: 0.1s;
+}
+
+#qui_gon_jinn:hover {
+    color: #92dce5;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+#han_solo_code {
+    background-color: #171930;
+}
+
+#han_solo_code>p {
+    color: #92dce5;
+}
+
+#watto {
+    color: #eee5e9;
+}
+
+#chewbacca {
+    color: #a37774;
+}
+
+a {
+    color: #eee5e9;
+    text-decoration: none;
+}
+
+
+
+.sirius_black {
+    color: #eee5e9;
+    font-size: 17px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.hermione {
+    color: #eee5e9;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.hermione_granger {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#footer {
+    margin: 10px;
+    color: #eee5e9;
+    font-family: sans-serif;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 700px;
+    background-color: #eee5e9;
+    margin: 10px;
+}
+
+
+
+#body_home {
+    height: 100vh;
+}
+
+#header_home {
+    height: 100px;
+    background-color: #5289FF;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#titulo_home {
+    margin-left: 25px;
+}
+
+#links_home {
+    display: flex;
+    list-style-type: none;
+    gap: 25px;
+    margin-right: 25px;
+}
+
+#main_home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main_home1 {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#main_home1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#texto_botao_home {
+    background-color: #5289FF;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#botao_home {
+    display: inline-block;
+    background-color: #5289FF;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#h3_home {
+    text-align: center;
+    font-size: 35px;
+    margin: 25px;
+}
+
+#lista_home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    gap: 20px;
+}
+
+
+#lista_home li {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+
+#lista_home li img {
+    width: 75px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.titulo_item {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.descricao_item {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+#footer_home {
+    height: 80px;
+    background-color: #5289FF;
+}
+.container {
             width: 400px;
             margin: 50px auto;
             padding: 20px;
@@ -107,11 +541,11 @@
         }
     
 
-        h1 {
+        #prismo {
             text-align: center;
         }
 
-        hr {
+        #litch {
             border: none;
             border-top: 1px solid #607D8B;
             margin: 20px 0;
@@ -121,7 +555,7 @@
             margin-bottom: 15px;
         }
 
-        button {
+        #rei {
             margin-top: 10px;
             padding: 8px 15px;
             border: none;
@@ -131,7 +565,7 @@
             cursor: pointer;
         }
 
-        button:hover {
+        #rei:hover {
             background: #084874;
         }
 
