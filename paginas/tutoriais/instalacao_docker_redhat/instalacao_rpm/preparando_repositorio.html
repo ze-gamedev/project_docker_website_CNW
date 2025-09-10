@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalação no Redhat</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="dookan_tyranus">
+        <h1>Instalação do Docker no RedHat</h1>
+    </header>
+
+    <main id="darth_vader">
+        <nav id="milleniun_falcon">
+            <ul id="milleniun_falcon_master">
+                <li><a href="../redhat.html">Instalação do Docker no RedHat</a>
+                    <ul id="milleniun_falcon_copilot">
+                        <li><a>Instalando a partir de repositório YUM/DNF</a>
+                            <ul id="milleniun_falcon_wings">
+                                <li><a href="./preparando_repositorio.html" id="milleniun_falcon_planet_selected">1.
+                                        Preparando o repositório
+                                        oficial do Docker</a></li>
+                                <li><a href="./instalando_pacotes.html">2. Instalando os últimos pacotes</a></li>
+                                <li><a href="./habilitando_servicos.html">3. Iniciando serviços</a></li>
+                                <li><a href="./verificando_instalacao.html">4. Verificando instalação</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <section id="luke_skywalker">
+
+            <h2 id="obi_wan">preparando o repositório oficial do Docker</h2>
+            <p>Antes da primeira instalação, é necessário adicionar o repositório oficial do Docker no sistema.</p><br>
+            <section id="han_solo_code">
+                <p><span id="watto"># Remover versões antigas (se existirem)</span><br>
+                    sudo yum remove docker \<br>
+                    docker-client \<br>
+                    docker-client-latest \<br>
+                    docker-common \<br>
+                    docker-latest \<br>
+                    docker-latest-logrotate \<br>
+                    docker-logrotate \<br>
+                    docker-engine<br>
+
+                    <span id="watto"># Instalar pacotes necessários</span><br>
+                    sudo yum install -y yum-utils<br>
+
+                    <span id="watto"># Adicionar repositório oficial do Docker</span><br>
+                    sudo yum-config-manager \<br>
+                    --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+                </p><br>
+            </section>
+        </section>
+
+        <a id="qui_gon_jinn" href="./instalando_pacotes.html">Seguir para o
+            próximo passo</a><br>
+        <a id="qui_gon_jinn" href="../redhat.html">Retornar para o último passo</a>
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+
+        ///pegarei o texto e entao farei ele fazer Shiu - sHiu - shIu - shiU
+
+        // pega texto
+        let text = document.getElementById("obi_wan");
+        //armazena texto
+        let original_text = text.textContent;
+        //contador do texto
+        let letter_get = 0;
+
+        // essa função pega a letra do contador e a torna maiuscula adicionando a uma nova string e transformando a nova string no texto mostrado
+        function OnetoUpperCase() {
+            let novoTexto = "";
+
+            ///loop para pegar a coordenada de caracter por caracter para torna-lo BIG 
+            for (let i = 0; i < original_text.length; i++) {
+                if (i === letter_get) {
+                    novoTexto += original_text[i].toUpperCase();
+                } else {
+                    novoTexto += original_text[i].toLowerCase();
+                }
+            }
+
+            //transforma texto da pagina no texto modificado
+            text.textContent = novoTexto;
+
+            // aumenta contador
+            letter_get += 1;
+
+            // se o contador passar de onde deve, reinicia
+            if (letter_get >= original_text.length) {
+                letter_get = 0;
+            }
+        }
+
+
+        //DEEEELAAAAAAAAAY em loop*
+        setInterval(OnetoUpperCase, 200);
+
+    </script>
+</body>
+
+</html>

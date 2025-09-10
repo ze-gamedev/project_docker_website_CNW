@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autores</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <header id="albus_dumbledore">
+        <h1>Docker - Autores</h1>
+    </header>
+
+    <section id="severus_snape">
+        <section id="hogwarts_express">
+            <a href="#" class="hermione_granger">
+                <img src="./imgs/pessoas.png" alt="Autores" class="ronald_weasley"> Nossos autores
+            </a>
+        </section>
+
+        <hr></hr>
+
+        <section id="firebolt">
+            <section class="autor-item">
+                <img src="./imgs/ana.jpeg" alt="Ana" class="icon" id="ana">
+                <span class="nome-autor" id="nome_ana"></span>
+            </section>
+
+            <section class="autor-item">
+                <img src="./imgs/beatriz.jpeg" alt="Beatriz" class="icon" id="beatriz">
+                <span class="nome-autor" id="nome_beatriz"></span>
+            </section>
+
+            <section class="autor-item">
+                <img src="./imgs/gabriella.jpeg" alt="Gabriella" class="icon" id="gabriella">
+                <span class="nome-autor" id="nome_gabriella"></span>
+            </section>
+
+            <section class="autor-item">
+                <img src="./imgs/jose.jpeg" alt="José" class="icon" id="jose">
+                <span class="nome-autor" id="nome_jose"></span>
+            </section>
+
+            <section class="autor-item">
+                <img src="./imgs/karen.jpeg" alt="Karen" class="icon" id="karen">
+                <span class="nome-autor" id="nome_karen"></span>
+            </section>
+
+            <section class="autor-item">
+                <img src="./imgs/nuno.jpeg" alt="Nuno" class="icon" id="nuno">
+                <span class="nome-autor" id="nome_nuno"></span>
+            </section>
+        </section>
+    </section>
+
+    <script>
+        function mostraNome(idImagem, nomeAutor) {
+            const elementoNome = document.getElementById('nome_' + idImagem);
+            if (elementoNome) {
+                elementoNome.textContent = nomeAutor;
+            }
+        }
+
+        document.getElementById('ana').onclick = function() { mostraNome('ana', 'Ana Beatriz de Souza Ramos'); };
+        document.getElementById('beatriz').onclick = function() { mostraNome('beatriz', 'Beatriz Fernandes Lima'); };
+        document.getElementById('gabriella').onclick = function() { mostraNome('gabriella', 'Gabriella Maia Gonçalves'); };
+        document.getElementById('jose').onclick = function() { mostraNome('jose', 'José Pedro dos Santos Fernandes'); };
+        document.getElementById('karen').onclick = function() { mostraNome('karen', 'Karen Bastos Fernandes'); };
+        document.getElementById('nuno').onclick = function() { mostraNome('nuno', 'Nuno Molico Schweter'); };
+    </script>
+</body>
+</html>
