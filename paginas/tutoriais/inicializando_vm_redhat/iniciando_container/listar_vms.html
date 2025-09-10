@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalação no Redhat</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="dookan_tyranus">
+        <h1>Inicializando VMs no Redhat</h1>
+    </header>
+
+    <main id="darth_vader">
+        <nav id="milleniun_falcon">
+            <ul id="milleniun_falcon_master">
+                <li><a href="../vm_redhat.html">Inicializando VMs no Redhat</a>
+                    <ul id="milleniun_falcon_copilot">
+                        <li><a>Iniciando uma VM (Container) no Red Hat com Docker</a>
+                            <ul id="milleniun_falcon_wings">
+                                <li><a href="./verificando_status.html">1. Verificar se o Docker está rodando</a></li>
+                                <li><a href="./rodando_vm.html">2. Rodar uma VM containerizada (exemplo com Ubuntu)</a></li>
+                                <li><a href="./rodando_segundo_plano.html">3. Rodar em segundo plano (modo daemon)</a></li>
+                                <li><a href="./listar_vms.html" id="milleniun_falcon_planet_selected">4. Listar containers ativos</a></li>
+                                <li><a href="./reiniciar.html">5. Parar e iniciar novamente a “VM”</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <section id="luke_skywalker">
+
+            <h2 id="obi_wan">listar containers ativos</h2>
+            <p>Para listar o containers ativos na sua máquina, você, como úsuario deve utilizar o comando:</p>
+            <section id="han_solo_code">
+                <p>sudo docker ps</p>
+            </section>
+
+            <a id="qui_gon_jinn" href="./reiniciar.html">Seguir para o
+                próximo passo</a><br>
+            <a id="qui_gon_jinn" href="./rodando_segundo_plano.html">Retornar para o último passo</a>
+        </section>
+
+    </main>
+
+    <script>
+
+        ///pegarei o texto e entao farei ele fazer Shiu - sHiu - shIu - shiU
+
+        // pega texto
+        let text = document.getElementById("obi_wan");
+        //armazena texto
+        let original_text = text.textContent;
+        //contador do texto
+        let letter_get = 0;
+
+        // essa função pega a letra do contador e a torna maiuscula adicionando a uma nova string e transformando a nova string no texto mostrado
+        function OnetoUpperCase() {
+            let novoTexto = "";
+
+            ///loop para pegar a coordenada de caracter por caracter para torna-lo BIG 
+            for (let i = 0; i < original_text.length; i++) {
+                if (i === letter_get) {
+                    novoTexto += original_text[i].toUpperCase();
+                } else {
+                    novoTexto += original_text[i].toLowerCase();
+                }
+            }
+
+            //transforma texto da pagina no texto modificado
+            text.textContent = novoTexto;
+
+            // aumenta contador
+            letter_get += 1;
+
+            // se o contador passar de onde deve, reinicia
+            if (letter_get >= original_text.length) {
+                letter_get = 0;
+            }
+        }
+
+
+        //DEEEELAAAAAAAAAY em loop*
+        setInterval(OnetoUpperCase, 200);
+
+    </script>
+</body>
+
+</html>
